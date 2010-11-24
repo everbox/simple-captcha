@@ -64,7 +64,7 @@ module SimpleCaptcha #:nodoc
         query = defaults.collect{ |key, value| "#{key}=#{value}" }.join('&')
         url = "/simple_captcha/#{simple_captcha_key}?#{query}"
         
-        "<img src='#{url}' alt='captcha' />".html_safe
+        "<img src='#{url}' alt='captcha' class='captcha' />".html_safe
       end
       
       def simple_captcha_field(options={})
